@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Order homemade cookies from Tolliver's Treats."
+  />
+
+  <title>Tolliver's Treats</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <a
+      class="brand"
+      href="#home"
+      aria-label="Tolliver's Treats home"
+    >
+      <img
+        src="assets/logo.jpeg"
+        alt="Tolliver's Treats logo"
+      />
+
+      <span>Tolliver's Treats</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#order">Order</a>
+
+      <button
+        class="cart-button"
+        id="openCart"
+      >
+        Cart
+        <span id="cartCount">0</span>
+      </button>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          Freshly baked • Made with love
+        </p>
+
+        <h1>
+          Big flavor in every bite.
+        </h1>
+
+        <p>
+          Homemade cookies from Tolliver's Treats,
+          available for pickup or local delivery.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="button primary"
+            href="#menu"
+          >
+            See the menu
+          </a>
+
+          <a
+            class="button secondary"
+            href="#order"
+          >
+            Order now
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- INTRODUCTION SECTION -->
+
+    <section class="section intro">
+
+      <div>
+
+        <p class="eyebrow">
+          The Tolliver's Treats difference
+        </p>
+
+        <h2>
+          Cookies that look good and taste even better.
+        </h2>
+
+      </div>
+
+      <p>
+        Each batch is prepared fresh, finished with our
+        signature drizzle, and packed for pickup or delivery.
+        Choose your favorite flavor or build a mixed box.
+      </p>
+
+    </section>
+
+    <!-- MENU SECTION -->
+
+    <section
+      class="section menu-section"
+      id="menu"
+    >
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Our menu
+        </p>
+
+        <h2>
+          Choose your flavor
+        </h2>
+
+        <p>
+          Select your cookies and add them to your cart.
+        </p>
+
+      </div>
+
+      <div
+        class="product-grid"
+        id="productGrid"
+      ></div>
+
+    </section>
+
+    <!-- COOKIE GALLERY -->
+
+    <section
+      class="section gallery-section"
+      id="gallery"
+    >
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Fresh from the kitchen
+        </p>
+
+        <h2>
+          Take a closer look
+        </h2>
+
+      </div>
+
+      <div class="gallery-grid">
+
+        <figure class="gallery-large">
+
+          <img
+            src="assets/assorted-cookies.jpeg"
+            alt="Assorted Tolliver's Treats cookies in a bakery box"
+          />
+
+        </figure>
+
+        <figure>
+
+          <img
+            src="assets/strawberry-lemonade.jpeg"
+            alt="Strawberry lemonade cookies with white drizzle"
+          />
+
+        </figure>
+
+        <figure>
+
+          <img
+            src="assets/cookie-box.jpeg"
+            alt="Fresh homemade cookies in a box"
+          />
+
+        </figure>
+
+      </div>
+
+    </section>
+
+    <!-- ORDER SECTION -->
+
+    <section
+      class="section order-section"
+      id="order"
+    >
+
+      <div class="order-copy">
+
+        <p class="eyebrow">
+          Pickup or delivery
+        </p>
+
+        <h2>
+          Tell us how you want your order.
+        </h2>
+
+        <p>
+          Add cookies to your cart, select pickup or delivery,
+          enter your information, and continue to secure checkout.
+        </p>
+
+        <div class="notice">
+
+          <strong>Important:</strong>
+
+          Card information should be collected through a secure
+          service such as Stripe, Square, or Shopify—not directly
+          through a basic GitHub form.
+
+        </div>
+
+      </div>
+
+      <form
+        class="order-form"
+        id="orderForm"
+      >
+
+        <label>
+
+          Full name
+
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Your full name"
+            required
+          />
+
+        </label>
+
+        <label>
+
+          Phone number
+
+          <input
+            type="tel"
+            id="customerPhone"
+            placeholder="(317) 555-1234"
+            required
+          />
+
+        </label>
+
+        <fieldset>
+
+          <legend>
+            How would you like to receive your order?
+          </legend>
+
+          <label class="radio-option">
+
+            <input
+              type="radio"
+              name="fulfillment"
+              value="Pickup"
+              checked
+            />
+
+            Pickup
+
+          </label>
+
+          <label class="radio-option">
+
+            <input
+              type="radio"
+              name="fulfillment"
+              value="Delivery"
+            />
+
+            Local delivery
+
+          </label>
+
+        </fieldset>
+
+        <label
+          id="addressField"
+          class="hidden"
+        >
+
+          Delivery address
+
+          <textarea
+            id="customerAddress"
+            rows="3"
+            placeholder="Street address, city, state, and ZIP code"
+          ></textarea>
+
+        </label>
+
+        <label>
+
+          Requested pickup or delivery date
+
+          <input
+            type="date"
+            id="requestedDate"
+            required
+          />
+
+        </label>
+
+        <label>
+
+          Order notes
+
+          <textarea
+            id="orderNotes"
+            rows="4"
+            placeholder="Preferred time, special requests, allergy information, or other details"
+          ></textarea>
+
+        </label>
+
+        <button
+          class="button primary full-width"
+          type="submit"
+        >
+          Review order
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+
+      <strong>
+        Tolliver's Treats
+      </strong>
+
+      <p>
+        Homemade cookies available for pickup and local delivery.
+      </p>
+
+    </div>
+
+    <p>
+      ©
+      <span id="year"></span>
+      Tolliver's Treats. All rights reserved.
+    </p>
+
+  </footer>
+
+  <!-- DARK BACKDROP BEHIND CART -->
+
+  <div
+    class="drawer-backdrop"
+    id="drawerBackdrop"
+  ></div>
+
+  <!-- SHOPPING CART -->
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    aria-hidden="true"
+  >
+
+    <div class="cart-header">
+
+      <div>
+
+        <p class="eyebrow">
+          Your order
+        </p>
+
+        <h2>
+          Cart
+        </h2>
+
+      </div>
+
+      <button
+        class="icon-button"
+        id="closeCart"
+        aria-label="Close cart"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <div
+      id="cartItems"
+      class="cart-items"
+    ></div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+
+        <span>
+          Estimated total
+        </span>
+
+        <strong id="cartTotal">
+          $0.00
+        </strong>
+
+      </div>
+
+      <button
+        class="button primary full-width"
+        id="goToOrder"
+      >
+        Continue
+      </button>
+
+      <button
+        class="text-button"
+        id="clearCart"
+      >
+        Clear cart
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- ORDER REVIEW POPUP -->
+
+  <dialog id="reviewDialog">
+
+    <button
+      class="dialog-close"
+      id="closeDialog"
+      aria-label="Close order review"
+    >
+      ×
+    </button>
+
+    <p class="eyebrow">
+      Order review
+    </p>
+
+    <h2>
+      Double-check your order
+    </h2>
+
+    <div id="orderSummary"></div>
+
+    <div class="dialog-actions">
+
+      <button
+        class="button secondary"
+        id="copyOrder"
+      >
+        Copy order details
+      </button>
+
+      <button
+        class="button primary"
+        id="secureCheckout"
+      >
+        Continue to secure checkout
+      </button>
+
+    </div>
+
+    <p class="small-print">
+      You will be sent to a secure payment provider.
+      Customers should never type their card information
+      directly into a plain GitHub Pages form.
+    </p>
+
+  </dialog>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
